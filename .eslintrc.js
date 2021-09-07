@@ -2,25 +2,28 @@ module.exports = {
   'parser': '@typescript-eslint/parser',
   'plugins': ['@typescript-eslint'],
   'rules': {
-    'no-var': 'error',// 不能使用var声明变量
-    'no-extra-semi': 'error',
-    '@typescript-eslint/indent': ['error', 2],
-    'import/extensions': 'off',
-    'linebreak-style': [0, 'error', 'windows'],
-    'indent': ['error', 2, { SwitchCase: 1 }], // error类型，缩进2个空格
-    'space-before-function-paren': 0, // 在函数左括号的前面是否有空格
-    'eol-last': 0, // 不检测新文件末尾是否有空行
+    'no-console': 'off',
+    'no-debugger': 'off',
+    '@typescript-eslint/explicit-module-boundary-types': 'off',
+    'prefer-const': 2, // 首选常量（let 没有被赋值 使用 const）
+    'eqeqeq': ['error', 'always', { 'null': 'ignore' }], // 使用 ===
+    'comma-style': [2, 'last'], // 控制逗号在行尾出现还是在行首出现
+    'comma-dangle': [2, 'never'], // 多行模式必须带逗号，单行模式不能带逗号
+    'comma-spacing': [2, { 'before': false, 'after': true }], // 控制逗号前后的空格
+    'space-before-function-paren': [2, 'never'], // 函数与()间禁止使用空格
     'semi': [2, 'never'], // 要求或禁止使用分号代替 ASI
-    'quotes': ['error', 'single'],// 字符串使用单双引号,double,single
+    'no-trailing-spaces': 2, // 禁止行尾出现空格
+    'space-in-parens': [2, 'never'], // 禁止使用括号内的空格
     'semi-spacing': [2, { // 禁止或强制使用分号周围的空格 例如 const a = 1 ; const b = 2，自动调整为 const a = 1; const b = 2
       'before': false,
       'after': true
     }],
-    'no-console': ['error', { allow: ['log', 'warn'] }],// 允许使用console.log()
-    'arrow-parens': 0,
-    'no-new': 0,//允许使用 new 关键字
-    'comma-dangle': [2, 'never'], // 数组和对象键值对最后一个逗号， never参数：不能带末尾的逗号, always参数：必须带末尾的逗号，always-multiline多行模式必须带逗号，单行模式不能带逗号
-    'no-undef': 0
+    'indent': [2, 2, { // 强制缩进一致
+      'SwitchCase': 1
+    }],
+    'object-curly-spacing': [2, 'always', { // 在大括号内强制保持一致的间距
+      objectsInObjects: false
+    }]
   },
   'parserOptions': {
     'ecmaVersion': 6,

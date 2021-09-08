@@ -4,10 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "NODE_ENV=development webpack serve --config build/webpack.config.js",
+    "dev": "webpack serve --node-env development --config build/webpack.config.js",
     "start": "npm run dev",
-    "build:dev": "NODE_ENV=development webpack --config build/webpack.config.js",
-    "build:prod": "NODE_ENV=production webpack --config build/webpack.config.js",
+    "build:dev": "webpack --node-env development --config build/webpack.config.js",
+    "build:prod": "webpack --node-env production --config build/webpack.config.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],

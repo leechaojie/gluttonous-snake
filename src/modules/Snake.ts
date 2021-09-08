@@ -4,7 +4,7 @@
 class Snake {
   private element: HTMLElement // 蛇的容器
   private head: HTMLElement // 蛇头
-  private bodies: HTMLCollection // 蛇的身体（包括蛇头）
+  public bodies: HTMLCollection // 蛇的身体（包括蛇头）
   constructor() {
     this.element = document.getElementById('snake')!
     this.head = document.querySelector('#snake > div')!
@@ -26,11 +26,6 @@ class Snake {
     // 新值与旧值相同，不再赋值
     if (this.X === value) return
 
-    // 限定范围 0 - 290
-    if (value < 0 || value > 290) {
-      throw new Error("蛇撞墙了")
-    }
-
     // 当第二节的位置等于传过来的第一节的位置时，就发生了掉头
     if (this.bodies[1] && (this.bodies[1] as HTMLElement).offsetLeft === value) {
       console.log('掉头了')
@@ -44,6 +39,11 @@ class Snake {
 
     }
 
+    // 限定范围 0 - 290
+    if (value < 0 || value > 290) {
+      throw new Error("蛇撞墙了")
+    }
+
     this.moveBody()
     this.head.style.left = value + 'px'
     // 检查是否撞到自己
@@ -55,11 +55,6 @@ class Snake {
     // 新值与旧值相同，不再赋值
     if (this.Y === value) return
 
-    // 限定范围 0 - 290
-    if (value < 0 || value > 290) {
-      throw new Error("蛇撞墙了")
-    }
-
     // 当第二节的位置等于传过来的第一节的位置时，就发生了掉头
     if (this.bodies[1] && (this.bodies[1] as HTMLElement).offsetTop === value) {
       console.log('掉头了')
@@ -70,6 +65,11 @@ class Snake {
       } else {
         value = this.Y + 10
       }
+    }
+
+    // 限定范围 0 - 290
+    if (value < 0 || value > 290) {
+      throw new Error("蛇撞墙了")
     }
 
     this.moveBody()

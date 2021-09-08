@@ -28,7 +28,7 @@ class GameControl {
   init() {
     // 监听键盘
     document.addEventListener('keydown', this.keydownHandler.bind(this))
-    // this.run()
+    this.run()
   }
 
   // 键盘按下相响应函数
@@ -42,7 +42,6 @@ class GameControl {
 
     // 修改 direction 属性
     this.direction = event.key
-    this.run()
 
   }
 

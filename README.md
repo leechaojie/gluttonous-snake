@@ -20,7 +20,7 @@
 
 ## Project setup
 
-```shell
+```bash
 yarn install
 ```
 
@@ -32,12 +32,12 @@ yarn start
 
 ### Compiles for development
 
-```shell
+```bash
 yarn build:dev
 ```
 
 ### Compiles and minifies for production
 
-```shell
+```bash
 yarn build:prod
 ```

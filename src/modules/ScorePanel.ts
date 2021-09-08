@@ -16,6 +16,10 @@ class ScorePanel {
     this.upScore = upScore
   }
 
+  public get gameLevel() : number {
+    return this.level
+  }
+
   // 加分
   addScore() {
     this.scoreEle.innerHTML = ++this.score + ''

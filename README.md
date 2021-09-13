@@ -1,6 +1,7 @@
 # ts贪吃蛇
 
-根据 [尚硅谷](https://www.bilibili.com/video/BV1Xy4y1v7S2?spm_id_from=333.999.0.0) 的ts教程实现
+根据 [尚硅谷](https://www.bilibili.com/video/BV1Xy4y1v7S2?spm_id_from=333.999.0.0) 的ts教程实现，
+并修复原有的bug
 
 项目使用 typescript-eslint 作为代码规范，如果遇到错误，在根目录 .vscode 文件夹下（没有就创建一个）settings.json 里配置以下代码
 

@@ -23,6 +23,18 @@ module.exports = {
     }],
     'object-curly-spacing': [2, 'always', { // 在大括号内强制保持一致的间距
       objectsInObjects: false
+    }],
+    'space-before-blocks': [2, 'always'],
+    'space-before-function-paren': [2, 'never'],
+    'space-in-parens': [2, 'never'],
+    'space-infix-ops': 2,
+    "no-multi-spaces": 2, // 不能有多余的空格
+    'space-unary-ops': [2, {
+      'words': true,
+      'nonwords': false
+    }],
+    'spaced-comment': [2, 'always', {
+      'markers': ['global', 'globals', 'eslint', 'eslint-disable', '*package', '!', ',']
     }]
   },
   'parserOptions': {
